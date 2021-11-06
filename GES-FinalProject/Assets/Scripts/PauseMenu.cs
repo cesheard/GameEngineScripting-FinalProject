@@ -10,9 +10,9 @@ public class PauseMenu : MonoBehaviour
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
-    public GameObject optionsGraphicsMenuUI;
-    public GameObject optionsControlsMenuUI;
-    public GameObject optionsAudioMenuUI;
+    //public GameObject optionsGraphicsMenuUI;
+    //public GameObject optionsControlsMenuUI;
+    //public GameObject optionsAudioMenuUI;
 
     public AudioMixer audioMixer;
     // -- -- //
@@ -20,12 +20,13 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Make sure everything is turned off by default
         gameIsPaused = false;
         pauseMenuUI.SetActive(false);
         optionsMenuUI.SetActive(false);
-        optionsGraphicsMenuUI.SetActive(false);
-        optionsControlsMenuUI.SetActive(false);
-        optionsAudioMenuUI.SetActive(false);
+        //optionsGraphicsMenuUI.SetActive(false);
+        //optionsControlsMenuUI.SetActive(false);
+        //optionsAudioMenuUI.SetActive(false);
 
     } // End of Start()
 
@@ -89,25 +90,25 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadGraphics()
     {
-        optionsGraphicsMenuUI.SetActive(true);
+        /*optionsGraphicsMenuUI.SetActive(true);
         optionsControlsMenuUI.SetActive(false);
-        optionsAudioMenuUI.SetActive(false);
+        optionsAudioMenuUI.SetActive(false);*/
 
     } // End of LoadGraphics()
 
     public void LoadControls()
     {
-        optionsGraphicsMenuUI.SetActive(false);
+        /*optionsGraphicsMenuUI.SetActive(false);
         optionsControlsMenuUI.SetActive(true);
-        optionsAudioMenuUI.SetActive(false);
+        optionsAudioMenuUI.SetActive(false);*/
 
     } // End of LoadControls()
 
     public void LoadAudio()
     {
-        optionsGraphicsMenuUI.SetActive(false);
+        /*optionsGraphicsMenuUI.SetActive(false);
         optionsControlsMenuUI.SetActive(false);
-        optionsAudioMenuUI.SetActive(true);
+        optionsAudioMenuUI.SetActive(true);*/
 
     } // End of LoadAudio()
 
