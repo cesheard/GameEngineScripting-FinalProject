@@ -16,4 +16,15 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void LoadPong()
+    {
+        SceneManager.LoadScene(1);
+
+    }
+
+    public void LoadPlinko()
+    {
+        SceneManager.LoadScene(2);
+    }
 }
