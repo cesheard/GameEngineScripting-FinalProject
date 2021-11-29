@@ -29,5 +29,7 @@ public class PlayerPaddle : MonoBehaviour
         // Keep the paddle within the game screen bounds
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -3.25f, 5.5f), transform.position.z);
 
+        // If ball was spawned, can launch with space
+
     }
 }

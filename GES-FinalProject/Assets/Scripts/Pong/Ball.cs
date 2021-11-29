@@ -21,7 +21,18 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision Occured");
+        //Debug.Log("Collision Occured with " + collision.gameObject.name);
         currentDirection = Vector2.Reflect(currentDirection, collision.contacts[0].normal);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(this.gameObject);
+    }
+
+    /*public void SpawnBall()
+    {
+        Instantiate(ballPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        currentDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0).normalized;
+    }*/
 }

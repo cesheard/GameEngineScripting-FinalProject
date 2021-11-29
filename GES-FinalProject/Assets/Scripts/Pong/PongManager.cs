@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PongManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] public GameObject ballPrefab;
+
+
+    IEnumerator Delay()
     {
-        
+        Debug.Log("Got to the coroutine");
+        yield return new WaitForSeconds(2);
+        Debug.Log("Finished coroutine");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnBall()
     {
-        
+        Debug.Log("Make new ball");
+        StartCoroutine(Delay());
+        Instantiate(ballPrefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 }
