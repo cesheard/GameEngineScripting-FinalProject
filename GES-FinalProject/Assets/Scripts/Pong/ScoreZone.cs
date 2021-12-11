@@ -11,11 +11,13 @@ public class ScoreZone : MonoBehaviour
         pongManager.SpawnBall();
         if (this.gameObject.name.Equals("RightScoreZone"))
         {
-
+            pongManager.leftPlayerScore += 1;
+            pongManager.leftScoreText.text = "" + pongManager.leftPlayerScore;
         }
         else if (this.gameObject.name.Equals("LeftScoreZone"))
         {
-
+            pongManager.rightPlayerScore += 1;
+            pongManager.rightScoreText.text = "" + pongManager.rightPlayerScore;
         }
     }
 }

@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 8727165731837564554, guid: bd54f111e3235404286f83c52cffd52f, type: 3}
+  leftScoreText: {fileID: 0}
+  rightScoreText: {fileID: 0}
+  leftPlayerScore: 0
+  rightPlayerScore: 0
